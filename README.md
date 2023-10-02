@@ -1,4 +1,4 @@
-# AlpharhoTech API Documentation
+# Alpha Rho Technologies LLC API Documentation
 
 This repository contains Python utilities for interfacing with AlpharhoTech's various APIs. With these utilities, users can retrieve investment strategy allocations and more.
 
@@ -14,7 +14,7 @@ This repository contains Python utilities for interfacing with AlpharhoTech's va
 
 ## Introduction
 
-AlpharhoTech provides a suite of APIs designed for investors seeking detailed analytics and data on various investment strategies. This repository is aimed at simplifying and streamlining the process of accessing that data.
+Alpha Rho Technologies LLC provides a suite of APIs designed for investors seeking detailed analytics and data on various investment strategies. This repository is aimed at simplifying and streamlining the process of accessing that data.
 
 ## Setup
 
