@@ -31,7 +31,7 @@ class ARTapi:
     if engine not in ['NeuralQ', 'NeuralS']:
         raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
 
-    url = f'https://www.alpharhotech.com/accounts/login/?next=/{engine}/{strategy}/'
+    url = f'https://www.alpharhotech.com/accounts/login/?next=/{engine}/{strategy}/sp/'
 
     data = request_data(url=url,login_payload=self.login_payload)
     return data
@@ -40,12 +40,24 @@ class ARTapi:
     '''
     Strategy Historical Price Data (shpd)
     '''
-    return None
+    if engine not in ['NeuralQ', 'NeuralS']:
+        raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
+
+    url = f'https://www.alpharhotech.com/accounts/login/?next=/{engine}/{strategy}/shpd/'
+
+    data = request_data(url=url,login_payload=self.login_payload)
+    return data
   
   def shp(self, strategy: str, engine: str) -> dict:
     '''
     Strategy Historical Portfolios (shp):
     '''
-    return None
+    if engine not in ['NeuralQ', 'NeuralS']:
+        raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
+
+    url = f'https://www.alpharhotech.com/accounts/login/?next=/{engine}/{strategy}/shp/'
+
+    data = request_data(url=url,login_payload=self.login_payload)
+    return data
 
 
