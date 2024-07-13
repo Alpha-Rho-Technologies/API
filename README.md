@@ -53,6 +53,8 @@ Replace "your_username" and "your_password" with your actual Alpha Rho Technolog
 **Only users with authorised credentials can access the API information.**
 Authorization is given on a product basis. We currently have two algorithms powering our strategies: Neural Q and Neural S. When fetching a strategy information, reference must be made to the algorithm powering the strategy.
 
+Link to notebook with code examples: [example.ipynb](notebooks/example.ipynb)
+
 ### Strategy Portfolio
 Fetches the current investment strategy allocation a user is subscribed to from Alpha Rho Technologies. 
 

@@ -29,7 +29,7 @@ class ARTapi:
     - HTTPError: If the POST request for login fails.
     """
     if engine not in ['NeuralQ', 'NeuralS']:
-        raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
+      raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
 
     url = f'https://www.alpharhotech.com/accounts/login/?next=/{engine}/{strategy}/sp/'
 
