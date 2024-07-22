@@ -7,6 +7,8 @@ class ARTapi:
     Log into alpharhotech.com
     '''
 
+    self.base_url = 'https://www.alpharhotech.com/accounts/login/?next=/api/'
+
     self.login_payload = {
     'login': user_name,
     'password': password,
@@ -31,7 +33,7 @@ class ARTapi:
     if engine not in ['NeuralQ', 'NeuralS']:
       raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
 
-    url = f'https://www.alpharhotech.com/accounts/login/?next=/{engine}/{strategy}/sp/'
+    url = self.base_url + f'{engine}/{strategy}/sp/'
 
     data = request_data(url=url,login_payload=self.login_payload)
     return data
@@ -43,7 +45,7 @@ class ARTapi:
     if engine not in ['NeuralQ', 'NeuralS']:
         raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
 
-    url = f'https://www.alpharhotech.com/accounts/login/?next=/{engine}/{strategy}/shpd/'
+    url = self.base_url + f'{engine}/{strategy}/shpd/'
 
     data = request_data(url=url,login_payload=self.login_payload)
     return data
@@ -55,7 +57,7 @@ class ARTapi:
     if engine not in ['NeuralQ', 'NeuralS']:
         raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
 
-    url = f'https://www.alpharhotech.com/accounts/login/?next=/{engine}/{strategy}/shp/'
+    url = self.base_url + f'{engine}/{strategy}/shp/'
 
     data = request_data(url=url,login_payload=self.login_payload)
     return data
