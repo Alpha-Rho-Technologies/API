@@ -33,7 +33,7 @@ class ARTapi:
     if engine not in ['NeuralQ', 'NeuralS']:
       raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
 
-    url = self.base_url + f'{engine}/{strategy}/sp/'
+    url = self.base_url + f'{engine.lower()}/{strategy}/sp/'
 
     data = request_data(url=url,login_payload=self.login_payload)
     return data
@@ -45,7 +45,7 @@ class ARTapi:
     if engine not in ['NeuralQ', 'NeuralS']:
         raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
 
-    url = self.base_url + f'{engine}/{strategy}/shpd/'
+    url = self.base_url + f'{engine.lower()}/{strategy}/shpd/'
 
     data = request_data(url=url,login_payload=self.login_payload)
     return data
@@ -57,7 +57,7 @@ class ARTapi:
     if engine not in ['NeuralQ', 'NeuralS']:
         raise ValueError("Engine must be 'NeuralQ' or 'NeuralS'")
 
-    url = self.base_url + f'{engine}/{strategy}/shp/'
+    url = self.base_url + f'{engine.lower()}/{strategy}/shp/'
 
     data = request_data(url=url,login_payload=self.login_payload)
     return data
